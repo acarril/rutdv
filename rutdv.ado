@@ -7,12 +7,14 @@
  \/__/\/_/\/____/ \/__/   \/__/\/_/ \/_/ \/___/      \/____/\/__/\/_/ \/_/   \/_/   \/_/\/___*/
                                                                                              
 program define rutdv
-syntax varname [if] [in]
+syntax varname [if] [in], Generate(name)
 marksample touse
 
 quietly {
-	// checks
-	
+
+	// Chequear variable a crear
+	gen `generate' = .
+
 	// Crear copia string de variable
 	tempvar var
 	gen `var' = `varlist' if `touse'
@@ -39,9 +41,9 @@ quietly {
 	egen `suma' = rowtotal(`digit_1'-`digit_`N'')
 
 	// Ultimas transformaciones
-	gen dv = 11-mod(`suma',11)
-	tostring dv, replace
-	replace dv = "0" if dv == "11"
-	replace dv = "K" if dv == "10"
+	replace `generate' = 11-mod(`suma',11)
+	tostring `generate', replace
+	replace `generate' = "0" if `generate' == "11"
+	replace `generate' = "K" if `generate' == "10"
 }
 end
