@@ -1,0 +1,9 @@
+v 1.0.0
+d Alvaro Carril
+d Princeton University
+d acarril@princeton.edu
+d https://github.com/acarril/rutdv
+
+d 'rutdv': Generate verifying digit for the Chilean ID (RUT)
+
+p rutdv
