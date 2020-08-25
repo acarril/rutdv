@@ -1,0 +1,16 @@
+v 1.0.0
+d 'rutdv': Generate verifying digit for the Chilean ID (RUT).
+d
+d KW: RUT
+d KW: RUN
+d KW: refinement
+d 
+d Requires: Stata version 11 
+d
+d Distribution Date: 20200825
+d
+d Author: Alvaro Carril
+d
+d Support: email acarril@princeton.edu
+d
+F rutdv.ado
