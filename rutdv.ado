@@ -17,7 +17,7 @@ quietly {
 
 	// Crear copia string de variable
 	tempvar var
-	gen `var' = `varlist' if `touse'
+	gen `var' = `varlist' // if `touse'
 	tostring `var', replace
 
 	// Extraer largo maximo de los rut
